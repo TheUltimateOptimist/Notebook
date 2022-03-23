@@ -8,15 +8,17 @@ class MDScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-      body: SafeArea(child:
-       Markdown(data: markDown, selectable: true, onTapLink: (linkName,url,_) async{
-         if(url != null){
-           await launch(url);
-         }
-       },),
-      
-        
+    return Scaffold(
+      body: SafeArea(
+        child: Markdown(
+          data: markDown,
+          selectable: true,
+          onTapLink: (linkName, url, _) async {
+            if (url != null) {
+              await launch(url);
+            }
+          },
+        ),
       ),
     );
   }
